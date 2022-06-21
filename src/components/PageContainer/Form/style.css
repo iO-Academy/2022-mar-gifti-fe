@@ -3,16 +3,11 @@ input {
     height: 47px;
     border-style: none;
 }
-h1{
-    color: #0D1C43;
-}
-label{
+
+label {
     color: #737182;
     font-weight: 700;
     font-size: 15px;
-}
-p{
-    color: #737182;
 }
 
 .submit_button{
@@ -21,9 +16,10 @@ p{
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    width:30%;
     align-self: center;
     cursor: pointer;
+    margin-top: 10px;
+
 }
 
 form{
@@ -36,10 +32,4 @@ form{
     padding: 4px 10px;
     margin: 5px 0px;
     font-family: 'Montserrat', sans-serif;
-}
-
-
-.form_container{
-    padding: 20px;
-    width: 600px;
 }
