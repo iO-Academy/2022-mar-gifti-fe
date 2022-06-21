@@ -1,0 +1,44 @@
+input {
+    border-radius: 25px;
+    height: 47px;
+    border-style: none;
+}
+h1{
+    color: #0D1C43;
+}
+label{
+    color: #737182;
+    font-weight: 700;
+    font-size: 15px;
+}
+p{
+    color: #737182;
+}
+
+.submit_button{
+    background-color: #0D1C43;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    width:30%;
+    align-self: center;
+}
+
+form{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.form_input{
+    background: #FAF6FF;
+    box-shadow: inset -4px -4px 4px #A89CBE, inset 0px 4px 4px rgba(168, 156, 190, 0.25);
+    padding: 4px 10px;
+    margin: 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.form_container{
+    padding: 20px;
+    width: 600px;
+}

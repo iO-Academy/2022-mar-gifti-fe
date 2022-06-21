@@ -1,3 +1,8 @@
+
+
+Gifti is a gift exchange app. Designed for people who want to take the hassle out of setting up a secret santa
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
