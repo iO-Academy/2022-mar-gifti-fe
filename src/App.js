@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/Form'
-import Form from "./components/Form";
+import './components/PageContainer/Form'
+import Form from "./components/PageContainer/Form";
+import Index from "./components/PageContainer";
 
 function App() {
   return (
-    <div>
-      <Form />
+    <div className="container">
+      <Index />
 
     </div>
   );

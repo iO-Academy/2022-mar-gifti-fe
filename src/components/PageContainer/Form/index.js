@@ -3,8 +3,6 @@ import './style.css'
 const Form =  () => {
     return (
         <div className="form_container">
-            <h1> Let's Get Gifting</h1>
-                <p>Input your event name and date to start your Gifti exchange</p>
             <form>
                 <label htmlFor="eventName">Event Name:</label>
                 <input required type="text" id="eventName" name="eventName" className="form_input"/>
