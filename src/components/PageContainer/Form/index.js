@@ -1,5 +1,5 @@
 import './style.css'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Navigate} from "react-router-dom";
 
 
@@ -30,7 +30,7 @@ const Form =  () => {
             .then(res => res.json())
             .then(data => {
                 setRedirect(true)
-                let sharingLink = 'http://localhost:3001/' + data.data.id
+                let sharingLink = window.location.host + '/' + data.data.id
                 localStorage.setItem('url', sharingLink)
             })
     }
@@ -40,22 +40,15 @@ const clickSubmit = (e) => {
         sendData(eventName, deadline)
 }
 
-
-
-
-
-
-
     return (
         <div className="form_container">
             <form onSubmit={clickSubmit}>
                 <label htmlFor="eventName">Event Name:</label>
-                <input required type="text" id="eventName" name="eventName" className="form_input" value={eventName} onChange={handleNameChange}/>
-                    <label htmlFor="deadline">Deadline:</label>
-                    <input required type="date" id="deadline" name="deadline" className="form_input" value={deadline} onChange={handleDeadlineChange}/>
-                        <input  type="submit" value="Get Started" className="submit_button" />
-                {redirect ? <Navigate replace to='/success' />: ''}
-
+                <input required type="text" id="eventName" className="form_input" name="eventName" value={eventName} onChange={handleNameChange}/>
+                <label htmlFor="deadline">Deadline:</label>
+                <input required type="date" id="deadline" className="form_input" name="deadline" value={deadline} onChange={handleDeadlineChange}/>
+                <input type="submit" value="Get Started" className="submit_button"/>
+                {redirect ? <Navigate replace to='/success'/>: ''}
             </form>
         </div>
     )
