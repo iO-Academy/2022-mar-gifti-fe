@@ -5,13 +5,16 @@ import {
     Link,
     Route,
     Routes,
+    Redirect
 } from "react-router-dom";
 import Home from "./components/PageContainer/SetupPageContent";
 import SuccessPageContent from "./components/PageContainer/SuccessPageContent";
 import PageContainer from "./components/PageContainer";
 
 
+
 function App() {
+
   return (
     <div>
         <PageContainer>
