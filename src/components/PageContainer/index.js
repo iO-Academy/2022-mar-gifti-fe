@@ -11,7 +11,7 @@ const Index = () => {
             <div className="lineDivider"></div>
         </div>
         <SetupPageContent />
-
+<p>ghduehuycheuheudh</p>
         <SuccessPageContent />
 
     </div>
