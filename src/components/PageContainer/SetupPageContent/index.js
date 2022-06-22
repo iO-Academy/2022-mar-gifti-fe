@@ -1,7 +1,7 @@
 
 import Form from "../Form";
 
-const SetupPageContent = () =>{
+const Home = () =>{
     return (
         <div className="card__content">
             <img className="card__illustration" src="../gifti_assets/present_illustration.svg"/>
@@ -16,5 +16,5 @@ const SetupPageContent = () =>{
     )
 }
 
-export default SetupPageContent
+export default Home
 
