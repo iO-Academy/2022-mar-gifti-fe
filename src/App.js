@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/Form'
 import Form from "./components/Form";
 import {
     BrowserRouter,
@@ -21,7 +20,6 @@ function App() {
             </Routes>
         </BrowserRouter>
         <Form />
-
     </div>
   );
 }
