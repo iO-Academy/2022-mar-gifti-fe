@@ -10,8 +10,8 @@ const Index = () => {
             <h1 className="pageTitle">Gifti</h1>
             <div className="lineDivider"></div>
         </div>
-        {/*<SetupPageContent />*/}
-        {/*<Form />*/}
+        <SetupPageContent />
+
         <SuccessPageContent />
 
     </div>
