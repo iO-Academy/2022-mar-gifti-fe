@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0D1C43;
+}
+
+
+body {
+    background-color: #E7DDF9;
+    font-family: montserrat, sans-serif;
+    font-size: 15px;
+    color: #737182;
+;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 32px 32px;
+}
+
+.pageTitle {
+    margin-bottom: 24px;
+}
+
+.lineDivider {
+    background-color: #CDCDCD;
+    width: 100%;
+    height: 2px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+}
+
+.card__content {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.card__header {
+    text-align: center;
+    padding: 0 64px;
+    margin-bottom: 32px;
+}
+
+.card__title {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.participants__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    column-gap: 16px;
+}
+
+.participant {
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.participant--pastelPurple {
+    background-color: #E7DDF9;
+    box-shadow: 0px 4px 4px rgba(63, 52, 82, 0.25);
+}
+
+.participant--pastelCoral {
+    background-color: #FAEAEA;
+    box-shadow: 0px 4px 4px rgba(95, 56, 56, 0.12);
+}
+
+.participant--pastelGreen {
+    background-color: #ECFDE5;
+    box-shadow: 0px 4px 4px rgba(108, 137, 97, 0.25);
+}
+
+.participantIconName--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.participant__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D1C43;
+    height: 42px;
+    width: 42px;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.participant__name {
+    font-weight: 600;
+    color: #0D1C43;
+    font-size: 18px;
+}
+
+.addParticipantBtn {
+    background-color: #0D1C43;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(108, 137, 97, 0.25);
+}
+
+.addParticipantBtn__text {
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+}
+
+.addParticipantBtn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 42px;
+    width: 42px;
+    font-size: 22px;
+    border-radius: 100%;
+    color: #0D1C43;
+    font-weight: 700;
+}
+
+.startGiftingOverlay {
+    background: #0D1C43;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 15vh;
+    position: absolute;
+    bottom: 0;
+    border-radius: 25px 25px 0 0 ;
+}
+
+.lobbyButtons {
+    display: none;
+    justify-content: end;
+    gap: 12px;
+    margin-top: 48px;
+
+}
+
+.btn {
+    border: none;
+    padding: 14px 28px;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.btn--primary {
+    background-color: #0D1C43;
+    color: #fff;
+}
+
+.btn--white {
+    background-color: #fff;
+}
+
+.btn--outline {
+    background-color: #fff;
+    box-shadow: inset 0 0 0 3px #0D1C43;å
+}
+
+@media (min-width: 740px) {
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .card {
+        padding: 70px;
+    }
+
+    .card__content {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .participants__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .addParticipantBtn {
+        display: none;
+    }
+
+    .startGiftingOverlay {
+        display: none;
+    }
+
+    .lobbyButtons {
+        display: flex;
+    }
+}
+
+@media (min-width: 1080px) {
+    .lineDivider {
+        margin-bottom: 48px;
+    }
+
+    .card__header {
+        padding: unset;
+    }
+
+    .card__title {
+        font-size: 42px;
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .participants__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
