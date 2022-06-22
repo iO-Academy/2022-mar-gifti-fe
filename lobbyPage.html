@@ -5,6 +5,7 @@
     <title>Gifti</title>
     <link rel="stylesheet" href="lobbyPageStyle.css">
     <script src="https://kit.fontawesome.com/9b98b550ee.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container">
@@ -55,6 +56,42 @@
         <p>Start Gifting!</p>
         <i class="fa-solid fa-arrow-right"></i>
     </button>
+</div>
+
+<div class="modal">
+    <div class="container">
+        <div class="card">
+            <div class="card__content">
+                <div class="card__header">
+                    <h2 class="card__title">Add a Participant</h2>
+                </div>
+                <img class="card__illustration" src="./gifti_assets/participant_illustration.svg"/>
+                <form class="addParticipantForm">
+                    <label>Full Name
+                    <input class="addParticipantForm__input" type="text"/>
+                    </label>
+                    <label>Email
+                        <input class="addParticipantForm__input" type="email"/>
+                    </label>
+                    <label>Address Line 1
+                        <input class="addParticipantForm__input" type="text"/>
+                    </label>
+                    <label>City
+                        <input class="addParticipantForm__input" type="text"/>
+                    </label>
+                    <div class="addParticipantForm__countyPostcode">
+                    <label>County
+                        <input class="addParticipantForm__input" type="text"/>
+                    </label>
+                    <label>Postcode
+                        <input class="addParticipantForm__input" type="text"/>
+                    </label>
+                    </div>
+                    <input class="addParticipantForm__submit" type="submit" value="Add Participant" />
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

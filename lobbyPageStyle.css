@@ -22,6 +22,19 @@ h6 {
     color: #0D1C43;
 }
 
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 4px;
+}
+
+input[type=text],
+input[type=email],
+input[type=submit]{
+    display: block;
+}
+
 
 body {
     background-color: #E7DDF9;
@@ -178,7 +191,6 @@ body {
     justify-content: end;
     gap: 12px;
     margin-top: 48px;
-
 }
 
 .btn {
@@ -206,8 +218,81 @@ body {
 
 .btn--outline {
     background-color: #fff;
-    box-shadow: inset 0 0 0 3px #0D1C43;å
+    box-shadow: inset 0 0 0 3px #0D1C43;
 }
+
+.modal {
+    position: fixed;
+    background-color: rgba(13, 28, 67, 0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+
+.modal .container {
+    max-width: 1000px;
+}
+
+.modal .card__illustration {
+    display: block;
+    width: 75%;
+    max-width: 480px;
+    align-self: center;
+    margin: 0 auto 32px auto;
+
+}
+
+.modal .card__content {
+    display: grid;
+    flex-direction: column;
+    row-gap: unset;
+}
+
+.modal .card__header {
+    text-align: center;
+    padding: 0 48px;
+    margin: unset;
+}
+
+.addParticipantForm {
+    display: grid;
+    row-gap: 8px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.addParticipantForm__input {
+    background-color: #FAF6FF;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    padding: 12px;
+    box-shadow: inset -4px -4px 4px #A89CBE, inset 0px 4px 4px rgba(168, 156, 190, 0.25);
+}
+
+.addParticipantForm__submit {
+    border: none;
+    display: inline;
+    padding: 12px;
+    background-color: #0D1C43;
+    color: #fff;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    margin: 12px auto 0 auto;
+    width: 90%;
+    max-width: 240px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.addParticipantForm__countyPostcode {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
 
 @media (min-width: 740px) {
     body {
@@ -248,6 +333,38 @@ body {
 
     .lobbyButtons {
         display: flex;
+    }
+
+    .modal .card__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 48px;
+    }
+
+    .modal .card__header {
+        text-align: left;
+        padding: unset;
+    }
+
+    .modal .card__illustration {
+        grid-row: 3 / -1;
+        grid-column: 2/ 3;
+        width: 100%;
+    }
+
+    .addParticipantForm {
+        width: 100%;
+        margin: unset;
+    }
+
+    .addParticipantForm__submit {
+        margin: 24px 0 0 0;
+    }
+
+    .addParticipantForm__countyPostcode {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 12px;
     }
 }
 
