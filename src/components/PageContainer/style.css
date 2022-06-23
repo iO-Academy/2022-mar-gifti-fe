@@ -92,9 +92,19 @@ body {
     margin-top:20px;
 }
 
+.copy_btn{
+    cursor:copy;
+}
+
 .btn--primary {
     background-color: #0D1C43;
     color: #fff;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 @media (min-width: 744px) {

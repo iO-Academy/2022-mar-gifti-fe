@@ -8,7 +8,7 @@ const SuccessPageContent= () => {
                 <div className="card__header">
                     <h2 className="card__title"> Heck Yes! </h2>
                     <p className="card__subTitle">Your event is all set up, use the link below to add more participants</p>
-                    <button onClick={() => {navigator.clipboard.writeText(urlToCopy)}} className="btn btn--primary">Copy Events URL</button>
+                    <button onClick={() => {navigator.clipboard.writeText(urlToCopy)}} className="copy_btn btn btn--primary">Copy Events URL</button>
                 </div>
             </div>
         </div>
