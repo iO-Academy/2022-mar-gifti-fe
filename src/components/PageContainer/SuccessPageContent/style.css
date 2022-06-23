@@ -5,25 +5,6 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-h1 {
-/*h2,*/
-/*h3,*/
-/*h4,*/
-/*h5,*/
-/*h6 {*/
-    color: #0D1C43
-/*;*/
-}
-
-
 body {
     background-color: #E7DDF9;
     font-family: montserrat, sans-serif;
@@ -34,37 +15,56 @@ body {
     height: 100vh;
 }
 
-
-.card {
-    background-color: #fff;
-    border-radius: 25px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 32px 32px;
-    width: 88%;
-    max-width: 1200px;
-    margin: auto;
-
+.card__content {
+    display: flex;
+    flex-direction: column;
 }
 
-.pageTitle {
-    margin-bottom: 24px;
-}
-
-.lineDivider {
-    background-color: #CDCDCD;
-    width: 100%;
-    height: 2px;
-    border-radius: 100px;
+.card__illustration {
+    display: block;
+    width: 80%;
+    max-width: 480px;
+    align-self: center;
     margin-bottom: 32px;
+}
+
+.card__header {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+.card__title {
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #0D1C43;
+}
+
+.btn {
+    border: none;
+    padding: 14px 28px;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top:20px;
+}
+
+.copy_btn{
+    cursor:copy;
+}
+
+.btn--primary {
+    background-color: #0D1C43;
+    color: #fff;
 }
 
 @media (min-width: 744px) {
     body {
         font-size: 18px;
-    }
-
-    h1 {
-        font-size: 42px;
     }
 
     h2 {
@@ -92,3 +92,12 @@ body {
         padding: 0 0 30px 0;
     }
 }
+
+
+
+
+
+
+
+
+

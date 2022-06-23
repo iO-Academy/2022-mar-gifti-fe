@@ -1,4 +1,4 @@
-
+import './style.css'
 import Form from "../Form";
 
 const Home = () =>{
