@@ -1,4 +1,4 @@
-import './style.css'
+import './FormStyle.css'
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
 
@@ -7,6 +7,7 @@ const Form =  () => {
     const [eventName, setEventName] = useState('')
     const [deadline, setDeadline] = useState('')
     const [redirect, setRedirect]  = useState(false)
+    const [homeDelivery, setHomeDelivery] = useState(false)
 
     const handleNameChange = (e) => {
         setEventName(e.target.value)
@@ -17,7 +18,7 @@ const Form =  () => {
     }
 
     const sendData = async (eventName, deadline) => {
-       let dataToSend = {event_name:eventName, deadline: deadline}
+       let dataToSend = {event_name: eventName, deadline: deadline, address_required: homeDelivery}
         console.log(JSON.stringify(dataToSend))
 
         await fetch('http://localhost:3000/events', {
@@ -44,10 +45,13 @@ const clickSubmit = (e) => {
         <div className="form_container">
             <form onSubmit={clickSubmit}>
                 <label htmlFor="eventName">Event Name:</label>
-                <input required type="text" id="eventName" className="form_input" name="eventName" value={eventName} onChange={handleNameChange}/>
+                <input required type="text" id="eventName" className="form_input" name="eventName" minLength="3" maxLength="255" value={eventName} onChange={handleNameChange}/>
                 <label htmlFor="deadline">Deadline:</label>
                 <input required type="date" id="deadline" className="form_input" name="deadline" value={deadline} onChange={handleDeadlineChange}/>
-                <input type="submit" value="Get Started" className="submit_button"/>
+                <label htmlFor="homeDelivery">Will your gifts be posted?
+                <input type="checkbox" id="homeDelivery" className="home_delivery" name="homeDelivery" checked={homeDelivery} onChange={(e) => setHomeDelivery(e.target.checked)}/>
+                </label>
+                    <input type="submit" value="Get Started" className="submit_button"/>
                 {redirect ? <Navigate replace to='/success'/>: ''}
             </form>
         </div>

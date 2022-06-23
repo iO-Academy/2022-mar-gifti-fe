@@ -33,3 +33,7 @@ form{
     margin: 5px 0px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.homeDelivery {
+    display: flex;
+}
