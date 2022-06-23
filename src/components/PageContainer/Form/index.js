@@ -45,7 +45,7 @@ const clickSubmit = (e) => {
         <div className="form_container">
             <form onSubmit={clickSubmit}>
                 <label htmlFor="eventName">Event Name:</label>
-                <input required type="text" id="eventName" className="form_input" name="eventName" value={eventName} onChange={handleNameChange}/>
+                <input required type="text" id="eventName" className="form_input" name="eventName" minLength="3" maxLength="255" value={eventName} onChange={handleNameChange}/>
                 <label htmlFor="deadline">Deadline:</label>
                 <input required type="date" id="deadline" className="form_input" name="deadline" value={deadline} onChange={handleDeadlineChange}/>
                 <label htmlFor="homeDelivery">Will your gifts be posted?
